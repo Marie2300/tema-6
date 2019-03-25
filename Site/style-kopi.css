@@ -1,0 +1,874 @@
+/************* GENERELT ***************/
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0.1px;
+    padding: 0;
+    line-height: 0;
+
+}
+
+footer {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background-color: #26262A;
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 20px;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.9rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: white;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: white;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+/************* MENU ***************/
+
+.hidden {
+    transform: scale(0);
+}
+
+
+#menuknap {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+#menu {
+    list-style-type: none;
+    transition: transform 1s;
+    transform-origin: top right;
+    position: absolute;
+    background-color: white;
+    min-width: 170px;
+    z-index: 1;
+    right: 1rem;
+    top: 1.9rem;
+}
+
+#menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    line-height: 3rem;
+}
+
+
+.siteheader {
+    display: none;
+}
+
+
+header img {
+    max-width: 50%;
+    margin-left: 1rem;
+    display: block;
+}
+
+.mobilenav {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    left:
+        background-color: black;
+}
+
+header {
+    width: 100%;
+    display: inline;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/*************TABLET*****************/
+
+@media only screen and (min-width:400px) {
+    header img {
+        max-width: 12rem;
+        margin-left: 2rem;
+    }
+}
+
+/*************DESKTOP*****************/
+
+@media only screen and (min-width: 945px) {
+    .mobilenav {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        display: inline;
+        position: fixed;
+        z-index: 2;
+    }
+
+    header .siteheader {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.2rem;
+    }
+
+    .siteheader a:hover {
+        color: black;
+    }
+
+    header .portfolie:hover {
+        color: black;
+    }
+
+    header nav a {
+        text-decoration: none;
+        padding-right: 1rem;
+    }
+
+    header a {
+        line-height: 1.2rem;
+        font-size: 22px;
+        color: white;
+    }
+
+    header img {
+        max-width: 15rem;
+        margin-left: 3rem;
+    }
+
+    .siteheader nav {
+        margin-right: 2.5rem;
+        display: flex;
+    }
+
+    /*************PORTFOLIE*****************/
+
+    #portfolie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-top: 2.5rem;
+        background-color: black;
+    }
+
+    #portfolie h1 {
+        padding-bottom: 0.3rem;
+        margin: 0;
+    }
+
+    #portfolie h2 {
+        padding: 0;
+    }
+
+    #portfolie .column_small {
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-basis: 200px;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+
+    #portfolie .column_small_2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-basis: 120px;
+        padding-top: 5rem;
+        width: 100%;
+        position: relative;
+        left: 3rem;
+    }
+
+    #prototype .column_small_2 {
+        flex-basis: 200px;
+        position: relative;
+        padding-top: 0.7rem;
+    }
+
+    #portfolie .column_big {
+        flex-grow: 2;
+        flex-basis: 200px;
+        width: 100%;
+        margin-top: 1.5rem;
+        margin-left: 20rem;
+    }
+
+    #portfolie .column_big_img {
+        margin-left: 15rem;
+        flex-basis: 200px;
+        flex-grow: 1;
+    }
+
+    /**** KNAPPER ****/
+
+    #portfolie .resultat_knap {
+        width: 18rem;
+        height: 3rem;
+        border-radius: 0.8rem;
+        text-align: center;
+        margin-top: 5rem;
+        padding: 0.6rem;
+    }
+
+    #swissstyle .resultat_knap {
+        outline: 3px white solid;
+    }
+
+    #video .resultat_knap {
+        outline: 3px white solid;
+    }
+
+    #redesign .resultat_knap {
+        outline: 3px white solid;
+    }
+
+    #lost .resultat_knap {
+        outline: 3px white solid;
+    }
+
+    #sexogsamfund .resultat_knap {
+        outline: 3px white solid;
+    }
+
+    #prototype .resultat_knap {
+        outline: 3px white solid;
+    }
+
+    #prototype .resultat_knap_2 {
+        outline: 3px white solid;
+        margin-top: 1rem;
+    }
+
+    #prototype .resultat_knap_3 {
+        outline: 3px white solid;
+        margin-top: 1rem;
+    }
+
+
+    #portfolie .dokumentation_knap {
+        width: 18rem;
+        height: 3rem;
+        border-radius: 0.8rem;
+        text-align: center;
+        margin: auto;
+        padding: 0.6rem;
+        margin-top: 1rem;
+    }
+
+    .dokumentation_knap {
+        outline: 3px white solid;
+    }
+
+
+    /**** BAGGRUNDSFLADERNE **/
+
+    .opgaver {
+        width: 100%;
+        padding: 1rem;
+        padding-top: 5rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    #swissstyle {
+        background-color: black;
+        outline: white 1px solid;
+        height: 60rem;
+    }
+
+    #video {
+        background-color: black;
+        outline: white 1px solid;
+        height: 49rem;
+    }
+
+    #redesign {
+        background-color: black;
+        outline: white 1px solid;
+        height: 58rem;
+    }
+
+    #lost {
+        background-color: black;
+        outline: white 1px solid;
+        height: 57rem;
+    }
+
+    #sexogsamfund {
+        background-color: black;
+        outline: white 1px solid;
+        height: 61rem;
+    }
+
+    #prototype {
+        background-color: black;
+        outline: white 1px solid;
+        height: 82rem;
+    }
+
+    /**** OVERLAY*****/
+
+    .overlay {
+        position: relative;
+        height: 50%;
+        width: 100%;
+        opacity: 3;
+        margin-left: 25rem;
+    }
+
+
+    #swissstyle .overlay {
+        position: relative;
+        margin-top: 2rem;
+        height: 22rem;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    #video .overlay {
+        background: rgba(0, 0, 0, 0.9);
+        margin-top: 2rem;
+        height: 17rem;
+    }
+
+    #redesign .overlay {
+        background: rgba(0, 0, 0, 0.9);
+        margin-top: 2rem;
+        height: 24rem;
+    }
+
+    #lost .overlay {
+        background: rgba(0, 0, 0, 0.9);
+        margin-top: 2rem;
+        height: 21rem;
+    }
+
+    #sexogsamfund .overlay {
+        background: rgba(0, 0, 0, 0.9);
+        margin-top: 2rem;
+        height: 25.3rem;
+    }
+
+    #prototype .overlay {
+        background: rgba(0, 0, 0, 0.9);
+        margin-top: 2rem;
+        height: 35rem;
+    }
+
+    /*********PORTFOLIE TABLET***********/
+
+    @media only screen and (min-width: 520px) {
+
+
+
+        #sexogsamfund,
+        #video {
+            height: 26rem;
+        }
+
+        #lost {
+            height: 27rem;
+        }
+
+        #swissstyle {
+            padding-top: 3rem;
+            height: 27rem;
+        }
+
+        #redesign {
+            height: 27rem;
+        }
+
+        #prototype {
+            height: 34rem;
+        }
+
+
+        /*********** PORTFOLIE OVERLAY TABLET**************/
+
+        .column_big img {
+            padding-top: 5rem;
+            padding-left: 2rem;
+        }
+
+        #prototype .column_big img {
+            padding-top: 7.3rem;
+        }
+
+
+        #portfolie .column_big {
+            position: relative;
+        }
+
+        #portfolie .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        #portfolie .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 200;
+            right: 0;
+            height: 100%;
+            width: 50%;
+            opacity: 0;
+            transition: .5s ease;
+        }
+
+
+        #portfolie .column_big:hover .overlay {
+            opacity: 1;
+        }
+
+
+        #swissstyle .overlay {
+            background: rgba(0, 0, 0, 0.9);
+            height: 20rem;
+            top: -3rem;
+        }
+
+        #video .overlay {
+            background: rgba(0, 0, 0, 0.9);
+            height: 19rem;
+            top: -2rem;
+
+        }
+
+        #redesign .overlay {
+            background: rgba(0, 0, 0, 0.9);
+            height: 20rem;
+            top: -3rem;
+        }
+
+        #lost .overlay {
+            background: rgba(0, 0, 0, 0.9);
+            height: 20rem;
+            top: -3rem;
+        }
+
+        #sexogsamfund .overlay {
+            background: rgba(0, 0, 0, 0.9);
+            height: 20rem;
+            top: -3rem;
+        }
+
+        #prototype .overlay {
+            background: rgba(0, 0, 0, 0.9);
+            height: 20rem;
+            top: -3rem;
+        }
+
+
+
+
+        /*********PORTFOLIE DESKTOP**************/
+
+        @media only screen and (min-width: 800px) {
+
+            #portfolie p {
+                font-size: 1.1rem;
+            }
+
+            #video,
+            #swissstyle,
+            #redesign,
+            #lost,
+            #sexogsamfund,
+            #prototype {
+                padding: 3rem;
+
+            }
+
+            #swissstyle {
+                padding-top: 4rem;
+                height: 35rem;
+            }
+
+            .column_big {
+                padding-top: 1rem;
+            }
+
+            #portfolie .resultat_knap,
+            #prototype .resultat_knap_2,
+            #prototype .resultat_knap_3,
+            #portfolie .dokumentation_knap {
+                margin: 0;
+                margin-top: 1rem;
+            }
+
+
+            #portfolie .column_small_1 {
+                background-color: black;
+                flex-grow: 0;
+                margin-bottom: 2.5rem;
+            }
+
+            #prototype .column_big img {
+                padding-top: 4rem;
+                padding-left: 4rem;
+            }
+
+            #video,
+            #lost,
+            #sexogsamfund {
+                height: 36rem;
+            }
+
+            #redesign {
+                height: 34rem;
+            }
+
+            #prototype {
+                height: 40rem;
+            }
+
+
+            #portfolie .column_small {
+                padding-top: 2rem;
+            }
+
+
+            /*** PORTFOLIE OVERLAY DESKTOP ****/
+
+            .column_big img {
+                padding-top: 1rem;
+                padding-left: 2rem;
+            }
+
+            #prototype .column_big img {
+                padding-top: 3rem;
+            }
+
+
+            #portfolie .column_big {
+                position: relative;
+            }
+
+            #portfolie .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 50%;
+                opacity: 0;
+                transition: .5s ease;
+            }
+
+
+            .column_big:hover .overlay {
+                opacity: 1;
+            }
+
+
+            #swissstyle .overlay {
+                background: rgba(0, 0, 0, 0.9);
+                height: 20rem;
+                top: 0rem;
+            }
+
+            #swissstyle .text_overlay {
+                margin-top: 2.5rem;
+                color: black;
+            }
+
+
+            #video .overlay {
+                background: rgba(0, 0, 0, 0.9);
+                height: 20rem;
+                top: 0rem;
+            }
+
+
+            #redesign .overlay {
+                background: rgba(0, 0, 0, 0.9);
+                height: 20rem;
+                top: 0rem;
+            }
+
+            #lost .overlay {
+                background: rgba(0, 0, 0, 0.9);
+                height: 20rem;
+                top: 0rem;
+            }
+
+
+            #sexogsamfund .overlay {
+                background: rgba(0, 0, 0, 0.9);
+                height: 20rem;
+                top: 0rem;
+            }
+
+            #prototype .overlay {
+                background: rgba(0, 0, 0, 0.9);
+                height: 20rem;
+                top: 0rem;
+            }
+
+
+            /*********KONTAKT SIDEN **************/
+            #kontakt {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 4rem;
+            }
+
+            .image {
+                width: 100%;
+                margin: 0;
+            }
+
+            #kontakt .row {
+                flex-direction: column;
+                flex-wrap: wrap;
+                display: flex;
+                align-items: center;
+            }
+
+            #kontakt .column1,
+            .column3,
+            .column5 {
+                flex-grow: 1;
+                flex-basis: 50px;
+                padding-top: 2rem;
+            }
+
+            #kontakt .column2,
+            .column4,
+            .column6 {
+                flex-grow: 1;
+                flex-basis: 50px;
+                padding-bottom: 1.2rem;
+            }
+
+            #kontakt img {
+                width: 5rem;
+            }
+
+            /** KONTAKT DESKTOP ****/
+
+            @media only screen and (min-width: 500px) {
+                #kontakt {
+                    padding-top: 8rem;
+                    padding-bottom: 5rem;
+                }
+
+                #kontakt .row {
+                    flex-direction: row;
+                    flex-basis: 150px;
+                    justify-content: center;
+                    align-items: center;
+                    width: 400px;
+                    margin-left: 6rem;
+                }
+
+                #kontakt .column1,
+                .column3,
+                .column5 {
+                    flex-grow: 1;
+                    flex-basis: 50px;
+                    padding: 0rem;
+                    padding-top: 0rem;
+                }
+
+                #kontakt .column2,
+                .column4,
+                .column6 {
+                    flex-grow: 2;
+                    flex-basis: 50px;
+                    padding: 0rem;
+                }
+            }
+
+            /***********OM SIDEN********/
+
+            #om {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(227, 227, 227);
+            }
+
+            #om .row,
+            .row_reverse {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+
+            #om .column1,
+            .column1_top {
+                flex-grow: 1;
+                flex-basis: 300px;
+            }
+
+
+            #om .column2,
+            .column2_top {
+                flex-grow: 1;
+                flex-basis: 300px;
+                background-color: rgb(227, 227, 227);
+                padding: 1.5rem;
+            }
+
+
+            #om .column2 {
+                height: 25rem;
+            }
+
+            /****OM TABLET***/
+
+            @media only screen and (min-width: 600px) {
+
+                #om .column2 {
+                    height: 19rem;
+                }
+
+                #om .column1_top {
+                    margin-top: 3rem;
+                }
+
+                #om .column2_top {
+                    padding-top: 3rem;
+                }
+
+                #om p {
+                    font-size: 0.8rem;
+                    color: black;
+                }
+
+
+            }
+
+            @media only screen and (min-width: 700px) {
+
+                #om .column2 {
+                    background-color: black;
+                    height: 24rem;
+                }
+
+                #om .column1_top {
+                    background-color: black;
+                    margin-top: 3rem;
+                }
+
+                #om .column2_top {
+                    background-color: black;
+                    padding-top: 3rem;
+                }
+
+                #om p {
+                    font-size: 1.1rem;
+                    color: white;
+                }
+
+                #om .resultat_knap {
+                    background-color: black;
+                    outline: white solid 2px;
+                }
+
+            }
+
+            /****OM DESKTOP***/
+
+            @media only screen and (min-width: 755px) {
+                #om .column2_top {
+                    background-color: black;
+                    padding-top: 5rem;
+                }
+
+                #om p {
+                    font-size: 1.1rem;
+                    line-height: 1.4;
+                    color: white;
+                }
+
+                #om .resultat_knap {
+                    background-color: black;
+                    outline: white solid 2px;
+                }
+
+            }
+
+            /*OM mobil reverse funktionen*/
+            @media only screen and (max-width: 600px) {
+                #om .row_reverse {
+                    display: flex;
+                    flex-wrap: wrap-reverse;
+                    flex-direction: row;
+                }
+
+            }

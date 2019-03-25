@@ -75,9 +75,10 @@ header nav a {
 }
 
 #menu_knap {
+    color: white;
     display: inline-block;
     padding-right: 0.2rem;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 #menu_burger {
@@ -128,11 +129,10 @@ header nav a {
     cursor: pointer;
 }
 
-@media only screen and (min-width:801px) {
-    #logo {
-        margin-top: 0px;
+#logo {
+    margin-top: 0px;
 
-    }
+}
 }
 
 /***************** FORSIDE********************/
@@ -152,10 +152,10 @@ header nav a {
 #forside .top img {
     display: flex;
     z-index: 2;
-    height: 30%;
-    width: 30%;
+    height: 35%;
+    width: 35%;
     margin-top: -30rem;
-    margin-left: -5rem;
+    margin-left: -1.5rem;
 }
 
 #forside .column {
@@ -173,23 +173,50 @@ header nav a {
     font-size: 40px;
     flex-grow: 1;
     flex-basis: 256px;
-    text-align: left;
+    text-align: center;
     margin-top: 2rem;
-    margin-left: -7rem;
-    margin-right: 2rem;
+    margin-left: -45rem;
 
 }
 
-#forside .column p {
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #77A8AD;
+    border: none;
     color: white;
-    font-size: 20px;
-    flex-grow: 1;
-    flex-basis: 256px;
     text-align: center;
-    margin-top: 0rem;
-    margin-left: -60rem;
-    margin-right: 2rem;
+    font-size: 28px;
+    padding: 10px;
+    width: 400px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: -60px;
+}
 
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 @media only screen and (max-width: 639px) {
@@ -313,31 +340,129 @@ h3 {
     max-width: 270px;
 }
 
-/***************** OM OS ***************/
+/***************** PORTFOLIO ***************/
 
-#om_os {
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 2.5rem;
+    background-color: black;
+}
+
+#portfolio h1 {
+    padding-bottom: 0.3rem;
+    margin: 0;
+}
+
+#portfolio h2 {
+    padding: 0;
+}
+
+#portfolio .column_small {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 200px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+#portfolio .column_small_2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 120px;
     padding-top: 5rem;
-    max-width: 800px;
+    width: 100%;
+    position: relative;
+    left: 3rem;
 }
 
-#om_os h2 {
-    font-size: 40px;
+#prototypo .column_small_2 {
+    flex-basis: 200px;
+    position: relative;
+    padding-top: 0.7rem;
+}
+
+#portfolio .column_big {
+    flex-grow: 2;
+    flex-basis: 200px;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-left: 20rem;
+}
+
+#portfolio .column_big_img {
+    margin-left: 15rem;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+/**** KNAPPER ****/
+
+#portfolio .resultat_knap {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 0.8rem;
     text-align: center;
+    margin-top: 5rem;
+    padding: 0.6rem;
 }
 
-#om_os p {
-    font-size: 20px;
-    margin: 2rem;
+#swissstyle .resultat_knap {
+    outline: 3px white solid;
 }
 
-#om_os .container {
-    margin-left: 6rem;
-
+#video .resultat_knap {
+    outline: 3px white solid;
 }
 
-#om_os .container img {
-    max-width: 100%;
+#redesign .resultat_knap {
+    outline: 3px white solid;
 }
+
+#lost .resultat_knap {
+    outline: 3px white solid;
+}
+
+#sexogsamfund .resultat_knap {
+    outline: 3px white solid;
+}
+
+#prototype .resultat_knap {
+    outline: 3px white solid;
+}
+
+#prototypo .resultat_knap_2 {
+    outline: 3px white solid;
+    margin-top: 1rem;
+}
+
+#prototypo .resultat_knap_3 {
+    outline: 3px white solid;
+    margin-top: 1rem;
+}
+
+
+#portfolio .dokumentation_knap {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    margin: auto;
+    padding: 0.6rem;
+    margin-top: 1rem;
+}
+
+.dokumentation_knap {
+    outline: 3px white solid;
+}
+
+
 
 /******************* KONTAKT *******************/
 
