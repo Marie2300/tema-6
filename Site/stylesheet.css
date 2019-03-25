@@ -1,0 +1,460 @@
+body {
+    margin: 0;
+    color: #241406;
+}
+
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+header {
+    font-family: 'teko', serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+p {
+    font-family: 'oswald', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    margin-left: 1rem;
+}
+
+.ret p,
+.ret h2 {
+    max-width: 270px;
+}
+
+
+/********************** MENU ***********************/
+
+header nav a:link,
+header nav a:visited,
+header nav a:active {
+    color: white;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 5%;
+    margin-top: 0;
+
+}
+
+header nav {
+    flex-direction: column;
+    margin: 1.3rem;
+    text-align: right;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 1rem;
+}
+
+/*********************** BURGER MENU ***********************/
+
+.hidden {
+    display: none;
+}
+
+#menu_knap {
+    display: inline-block;
+    padding-right: 0.2rem;
+    font-size: 1.2rem;
+}
+
+#menu_burger {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+#menu_burger a {
+    padding-right: 0.5rem;
+}
+
+#menu_burger li {
+    margin: 1.6rem;
+}
+
+
+.hide_burgermenu {
+    display: none;
+}
+
+#menu_knap:hover {
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:800px) {
+    .hide_burgermenu {
+        display: block;
+    }
+
+    .hide_menu {
+        display: none;
+    }
+}
+
+#logo {
+    background-image: url("logo_hvid.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 150px;
+    height: 150px;
+    margin-top: -2px;
+    position: absolute;
+}
+
+#logo:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+@media only screen and (min-width:801px) {
+    #logo {
+        margin-top: 0px;
+
+    }
+}
+
+/***************** FORSIDE********************/
+
+#splash {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#splash img {
+    padding-top: -15rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+
+#splash .column {
+    flex-grow: 1;
+    flex-basis: 500px;
+    flex-direction: column;
+}
+
+#forside .column {
+    flex-grow: 1;
+    flex-basis: 256px;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+#forside .column h3 {
+    font-size: 40px;
+    flex-grow: 1;
+    flex-basis: 256px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+#forside .column p {
+    font-size: 20px;
+    flex-grow: 1;
+    flex-basis: 256px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+@media only screen and (max-width: 639px) {
+    #splash .hide {
+        display: none;
+    }
+}
+
+/******************* MENUKORT******************/
+
+#liste {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5vw;
+    max-width: 900px;
+    margin: auto;
+}
+
+.ret {
+    margin: 2px;
+    padding: 8px;
+}
+
+#popup {
+    margin: 20rem;
+    margin-left: 50rem;
+    top: 0;
+    width: 20vw;
+    height: 40vh;
+    position: fixed;
+    background-color: white;
+    display: none;
+    overflow: scroll;
+}
+
+#luk {
+    position: fixed;
+    right: 29rem;
+}
+
+#luk button {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#indhold {
+
+    display: flex;
+    height: 50vh;
+    width: 20vw;
+    margin-left: 4rem auto;
+    text-align: center;
+}
+
+#indhold p,
+h2,
+h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #liste {
+        max-width: 300px;
+    }
+
+    #indhold img {
+        max-width: 270px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* For tablets*/
+    #liste {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ret {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 940px) {
+
+    /* For computers */
+    #liste {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.menu {
+    margin: 0 1rem 1rem 1rem;
+    padding-top: 4.8rem;
+    text-align: center;
+}
+
+.filter {
+    font-family: 'oswald', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 14px;
+    padding: 8px;
+    color: black;
+    border: none;
+}
+
+.valgt {
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+
+}
+
+.ret img {
+    max-width: 270px;
+}
+
+/***************** OM OS ***************/
+
+#om_os {
+    padding-top: 5rem;
+    max-width: 800px;
+}
+
+#om_os h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+#om_os p {
+    font-size: 20px;
+    margin: 2rem;
+}
+
+#om_os .container {
+    margin-left: 6rem;
+
+}
+
+#om_os .container img {
+    max-width: 100%;
+}
+
+/******************* KONTAKT *******************/
+
+#kontakt {
+    padding-top: 5rem;
+}
+
+#kontakt h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+#kontakt p {
+    font-size: 20px;
+    margin-bottom: 0.2rem;
+}
+
+#kontakt .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 2rem 2rem 2rem;
+}
+
+#kontakt .column {
+    flex-grow: 1;
+    flex-basis: 260px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#send {
+    text-align: right;
+}
+
+.box {
+    border: 1px black solid;
+    background-color: white;
+    height: 35px;
+}
+
+#box {
+    height: 110px;
+}
+
+#billede img {
+    margin-left: 4rem;
+    max-width: 100%;
+}
+
+
+
+@media only screen and (min-width: 580px) {
+    #kontakt .column {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 647px) {
+    #kontakt img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 648px) {
+    #billede {
+        padding: 1rem 1rem 6.5vh 0rem;
+    }
+}
+
+/********** FOOTER *********/
+
+footer {
+    padding: 1.2rem;
+    background-color: #F7F5F0;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: black;
+    font-size: 20px;
+}
+
+footer h3 {
+    color: black;
+    font-size: 30px;
+}
+
+#footer_logo {
+    background-image: url("imgs/kontakt.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 330px;
+    height: 335px;
+    padding: 1rem;
+}
+
+footer .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .column {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+footer {
+    flex-grow: 1;
+    flex-basis: 200px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.container_footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
