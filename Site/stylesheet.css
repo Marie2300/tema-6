@@ -149,41 +149,45 @@ header nav a {
     display: flex;
 }
 
-
-#splash .column {
-    flex-grow: 1;
-    flex-basis: 500px;
-    flex-direction: column;
+#forside .top img {
+    display: flex;
+    z-index: 2;
+    height: 30%;
+    width: 30%;
+    margin-top: -30rem;
+    margin-left: -5rem;
 }
 
 #forside .column {
     flex-grow: 1;
     flex-basis: 256px;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: -0rem;
     margin-left: 2rem;
     margin-right: 2rem;
 
 }
 
 #forside .column h3 {
+    color: white;
     font-size: 40px;
     flex-grow: 1;
     flex-basis: 256px;
-    text-align: center;
+    text-align: left;
     margin-top: 2rem;
-    margin-left: 2rem;
+    margin-left: -7rem;
     margin-right: 2rem;
 
 }
 
 #forside .column p {
+    color: white;
     font-size: 20px;
     flex-grow: 1;
     flex-basis: 256px;
     text-align: center;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    margin-top: 0rem;
+    margin-left: -60rem;
     margin-right: 2rem;
 
 }
