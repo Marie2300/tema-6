@@ -1,6 +1,7 @@
 body {
     margin: 0;
     color: #241406;
+    background-color: #3E4657;
 }
 
 section {
@@ -34,7 +35,7 @@ p {
 }
 
 
-/********************** MENU ***********************/
+/********************** MENU DESKTOP***********************/
 
 header nav a:link,
 header nav a:visited,
@@ -135,7 +136,7 @@ header nav a {
 }
 }
 
-/***************** FORSIDE********************/
+/***************** DESKTOP ********************/
 
 #splash {
     display: flex;
@@ -149,27 +150,46 @@ header nav a {
     display: flex;
 }
 
+video {
+    display: flex;
+    z-index: 2;
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-top: -30rem;
+}
+
 #forside .top img {
     display: flex;
     z-index: 2;
-    height: 35%;
-    width: 35%;
-    margin-top: -30rem;
-    margin-left: -1.5rem;
+    height: 50%;
+    width: 50%;
+    margin-top: 10rem;
+    margin-left: -6rem;
+}
+
+#forside .column2 h3 {
+    color: white;
+    flex-grow: 1;
+    flex-basis: 256px;
+    margin-top: 0rem;
+    margin-left: 35rem;
+    text-align: left;
+
+}
+
+#forside .column2 h1 {
+    color: white;
+    flex-grow: 1;
+    flex-basis: 256px;
+    margin-top: -24rem;
+    margin-left: 35rem;
+    text-align: left;
+
 }
 
 #forside .column {
-    flex-grow: 1;
-    flex-basis: 256px;
-    flex-direction: column;
-    margin-top: -0rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-
-}
-
-#forside .column h3 {
-    color: white;
+    color: black;
     font-size: 40px;
     flex-grow: 1;
     flex-basis: 256px;
@@ -182,7 +202,227 @@ header nav a {
 .button {
     display: inline-block;
     border-radius: 4px;
-    background-color: #77A8AD;
+    background-color: #00FF1C;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 400px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: -60px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/***************** PORTFOLIO DESKTOP ********************/
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 2.5rem;
+}
+
+#portfolio h1 {
+    padding-bottom: 0.3rem;
+    margin: 0;
+}
+
+#portfolio h2 {
+    padding: 0;
+}
+
+#portfolio .column_small1 {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 200px;
+    margin-top: 10rem;
+    margin-left: 40rem;
+    flex-grow: 1;
+    width: 50%;
+
+}
+
+#portfolio .column_small2 {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 200px;
+    margin-top: 5rem;
+    margin-left: 40rem;
+    flex-grow: 1;
+    width: 50%;
+}
+
+#portfolio .column_big {
+    flex-grow: 2;
+    flex-basis: 200px;
+    width: 100%;
+    margin-top: -10rem;
+    margin-right: 20rem;
+}
+
+#portfolio .column_big_img {
+    margin-left: 15rem;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+#portfolio .resultat_knap h3 {
+
+    background-color: #00FF1C;
+    color: white;
+    width: 18rem;
+    height: 3rem;
+    font-size: 2rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: 7rem;
+    padding: 0.6rem;
+}
+
+/********** FOOTER *********/
+
+footer {
+    padding: 1.2rem;
+    background-color: #FF6A00;
+    margin-top: 5rem;
+}
+
+footer p {
+    color: black;
+    font-size: 20px;
+}
+
+footer h3 {
+    color: black;
+    font-size: 30px;
+}
+
+
+/***************** TABLET ********************/
+
+
+@media only screen and (max-width: 639px) {
+    #splash .hide {
+        display: none;
+    }
+}
+
+#logo {
+    background-image: url("logo_hvid.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 150px;
+    height: 150px;
+    margin-top: -2px;
+    position: absolute;
+}
+
+#logo:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#logo {
+    margin-top: 0px;
+
+}
+
+#splash {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#splash img {
+    padding-top: -15rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+video {
+    display: flex;
+    z-index: 2;
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-top: -30rem;
+}
+
+#forside .top img {
+    display: flex;
+    z-index: 2;
+    height: 50%;
+    width: 50%;
+    margin-top: 10rem;
+    margin-left: -6rem;
+}
+
+#forside .column2 h3 {
+    color: white;
+    flex-grow: 1;
+    flex-basis: 256px;
+    margin-top: 0rem;
+    margin-left: 35rem;
+    text-align: left;
+
+}
+
+#forside .column2 h1 {
+    color: white;
+    flex-grow: 1;
+    flex-basis: 256px;
+    margin-top: -24rem;
+    margin-left: 35rem;
+    text-align: left;
+
+}
+
+#forside .column {
+    color: black;
+    font-size: 40px;
+    flex-grow: 1;
+    flex-basis: 256px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: -45rem;
+
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #00FF1C;
     border: none;
     color: white;
     text-align: center;
@@ -225,129 +465,44 @@ header nav a {
     }
 }
 
-/******************* MENUKORT******************/
-
-#liste {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 5vw;
-    max-width: 900px;
-    margin: auto;
-}
-
-.ret {
-    margin: 2px;
-    padding: 8px;
-}
-
-#popup {
-    margin: 20rem;
-    margin-left: 50rem;
-    top: 0;
-    width: 20vw;
-    height: 40vh;
-    position: fixed;
-    background-color: white;
-    display: none;
-    overflow: scroll;
-}
-
-#luk {
-    position: fixed;
-    right: 29rem;
-}
-
-#luk button {
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-#indhold {
-
-    display: flex;
-    height: 50vh;
-    width: 20vw;
-    margin-left: 4rem auto;
-    text-align: center;
-}
-
-#indhold p,
-h2,
-h3 {
-    text-align: center;
-    margin: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-
-    #liste {
-        max-width: 300px;
-    }
-
-    #indhold img {
-        max-width: 270px;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-
-    /* For tablets*/
-    #liste {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ret {
-        margin: 0 auto;
-    }
-}
-
-@media only screen and (min-width: 940px) {
-
-    /* For computers */
-    #liste {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.menu {
-    margin: 0 1rem 1rem 1rem;
-    padding-top: 4.8rem;
-    text-align: center;
-}
-
-.filter {
-    font-family: 'oswald', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-size: 14px;
-    padding: 8px;
-    color: black;
-    border: none;
-}
-
-.valgt {
-    background-color: black;
+header nav a:link,
+header nav a:visited,
+header nav a:active {
     color: white;
-    border-radius: 3px;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 5%;
+    margin-top: 0;
 
 }
 
-.ret img {
-    max-width: 270px;
+header nav {
+    flex-direction: column;
+    margin: 1.3rem;
+    text-align: right;
 }
 
-/***************** PORTFOLIO ***************/
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 1rem;
+}
+
 
 #portfolio {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     padding-top: 2.5rem;
-    background-color: black;
 }
 
 #portfolio h1 {
@@ -359,41 +514,37 @@ h3 {
     padding: 0;
 }
 
-#portfolio .column_small {
-    background-color: black;
+#portfolio .column_small1 {
+    color: white;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     flex-basis: 200px;
+    margin-top: 10rem;
+    margin-left: 40rem;
     flex-grow: 1;
-    width: 100%;
+    width: 50%;
+
 }
 
-
-#portfolio .column_small_2 {
+#portfolio .column_small2 {
+    color: white;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex-grow: 1;
-    flex-basis: 120px;
-    padding-top: 5rem;
-    width: 100%;
-    position: relative;
-    left: 3rem;
-}
-
-#prototypo .column_small_2 {
     flex-basis: 200px;
-    position: relative;
-    padding-top: 0.7rem;
+    margin-top: 5rem;
+    margin-left: 40rem;
+    flex-grow: 1;
+    width: 50%;
 }
 
 #portfolio .column_big {
     flex-grow: 2;
     flex-basis: 200px;
     width: 100%;
-    margin-top: 1.5rem;
-    margin-left: 20rem;
+    margin-top: -10rem;
+    margin-right: 20rem;
 }
 
 #portfolio .column_big_img {
@@ -402,145 +553,26 @@ h3 {
     flex-grow: 1;
 }
 
-/**** KNAPPER ****/
+#portfolio .resultat_knap h3 {
 
-#portfolio .resultat_knap {
+    background-color: #00FF1C;
+    color: white;
     width: 18rem;
     height: 3rem;
+    font-size: 2rem;
     border-radius: 0.8rem;
     text-align: center;
     margin-top: 5rem;
+    margin-left: 7rem;
     padding: 0.6rem;
-}
-
-#swissstyle .resultat_knap {
-    outline: 3px white solid;
-}
-
-#video .resultat_knap {
-    outline: 3px white solid;
-}
-
-#redesign .resultat_knap {
-    outline: 3px white solid;
-}
-
-#lost .resultat_knap {
-    outline: 3px white solid;
-}
-
-#sexogsamfund .resultat_knap {
-    outline: 3px white solid;
-}
-
-#prototype .resultat_knap {
-    outline: 3px white solid;
-}
-
-#prototypo .resultat_knap_2 {
-    outline: 3px white solid;
-    margin-top: 1rem;
-}
-
-#prototypo .resultat_knap_3 {
-    outline: 3px white solid;
-    margin-top: 1rem;
-}
-
-
-#portfolio .dokumentation_knap {
-    width: 18rem;
-    height: 3rem;
-    border-radius: 0.8rem;
-    text-align: center;
-    margin: auto;
-    padding: 0.6rem;
-    margin-top: 1rem;
-}
-
-.dokumentation_knap {
-    outline: 3px white solid;
-}
-
-
-
-/******************* KONTAKT *******************/
-
-#kontakt {
-    padding-top: 5rem;
-}
-
-#kontakt h2 {
-    font-size: 40px;
-    text-align: center;
-}
-
-#kontakt p {
-    font-size: 20px;
-    margin-bottom: 0.2rem;
-}
-
-#kontakt .sectionwrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 2rem 2rem 2rem;
-}
-
-#kontakt .column {
-    flex-grow: 1;
-    flex-basis: 260px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#send {
-    text-align: right;
-}
-
-.box {
-    border: 1px black solid;
-    background-color: white;
-    height: 35px;
-}
-
-#box {
-    height: 110px;
-}
-
-#billede img {
-    margin-left: 4rem;
-    max-width: 100%;
-}
-
-
-
-@media only screen and (min-width: 580px) {
-    #kontakt .column {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-}
-
-@media only screen and (max-width: 647px) {
-    #kontakt img {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 648px) {
-    #billede {
-        padding: 1rem 1rem 6.5vh 0rem;
-    }
 }
 
 /********** FOOTER *********/
 
 footer {
     padding: 1.2rem;
-    background-color: #F7F5F0;
-    margin-top: 2rem;
+    background-color: #FF6A00;
+    margin-top: 5rem;
 }
 
 footer p {
@@ -551,39 +583,4 @@ footer p {
 footer h3 {
     color: black;
     font-size: 30px;
-}
-
-#footer_logo {
-    background-image: url("imgs/kontakt.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 330px;
-    height: 335px;
-    padding: 1rem;
-}
-
-footer .sectionwrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-footer .column {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-    margin: 0 auto;
-}
-
-footer {
-    flex-grow: 1;
-    flex-basis: 200px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-}
-
-.container_footer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
 }
