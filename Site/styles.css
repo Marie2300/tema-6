@@ -156,7 +156,7 @@ video {
     width: 50%;
     height: 50%;
     margin-left: 25%;
-    margin-top: -20rem;
+    margin-top: 20vw;
 }
 
 #forside .top img {
@@ -185,7 +185,7 @@ video {
     margin-top: -24rem;
     margin-left: 35rem;
     text-align: left;
-     font-size: 25px;
+    font-size: 25px;
     font-family: 'Baloo Chettan', cursive;
 
 }
@@ -265,8 +265,7 @@ video {
     flex-wrap: wrap;
     flex-direction: column;
     flex-basis: 200px;
-    margin-top: 10rem;
-    margin-left: 40rem;
+    margin-left: 20rem;
     flex-grow: 1;
     width: 50%;
 
@@ -278,8 +277,7 @@ video {
     flex-wrap: wrap;
     flex-direction: column;
     flex-basis: 200px;
-    margin-top: 5rem;
-    margin-left: 40rem;
+    margin-left: 20rem;
     flex-grow: 1;
     width: 50%;
 }
@@ -288,28 +286,25 @@ video {
     flex-grow: 2;
     flex-basis: 200px;
     width: 100%;
-    margin-top: -10rem;
-    margin-right: 20rem;
-}
-
-#portfolio .column_big_img {
-    margin-left: 15rem;
-    flex-basis: 200px;
-    flex-grow: 1;
+    margin-left: -190px;
 }
 
 #portfolio .resultat_knap h3 {
 
     background-color: #00FF1C;
     color: white;
-    width: 18rem;
     height: 3rem;
-    font-size: 2rem;
     border-radius: 0.8rem;
     text-align: center;
     margin-top: 5rem;
-    margin-left: 7rem;
+    padding-left: 5vw;
     padding: 0.6rem;
+}
+
+#portfolio video {
+
+    margin-top: -25vw;
+    width: 25%;
 }
 
 /********** FOOTER *********/
@@ -585,6 +580,10 @@ header nav a {
     padding: 0.6rem;
 }
 
+#mini {
+    margin-left: -25vw;
+}
+
 /********** FOOTER *********/
 
 footer {
@@ -601,4 +600,84 @@ footer p {
 footer h3 {
     color: black;
     font-size: 30px;
+}
+
+/*********** Media queries ***************/
+
+@media screen and (max-width: 1024px) {
+    #forside .column2 h1 {
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #forside .column2 h3 {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #forside .top img {
+        margin-left: 20px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .button {
+        width: 380px;
+        margin-left: 380px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    video {
+        margin-top: -300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #portfolio .resultat_knap h3 {
+        width: 200px;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #portfolio .column_big_img {
+        width: 50vw;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #portfolio .column_small1 {
+        width: 50vw;
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #portfolio h2 {
+        font-size: 20px;
+        margin-left: -200px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #portfolio p {
+        font-size: 20px;
+        margin-left: -200px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        position: absolute;
+        width: 100vw;
+    }
 }
