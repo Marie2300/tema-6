@@ -1,7 +1,7 @@
 body,
 html {
 
-    background-color: #C3D5BD;
+    background-color: #3E4657;
     height: 100%;
     font-family: 'Lato', sans-serif;
 }
@@ -12,7 +12,7 @@ html {
     visibility: hidden;
 }
 #title {
-    background-image: url(img/title.svg);
+    background-image: url(Billeder/img/title.svg);
     width: 20vw;
     height: 20vw;
     position: absolute;
@@ -30,7 +30,7 @@ h1 {
 }
 
 #bkimg {
-    background-image: url(img/background.svg);
+    background-image: url(Billeder/img/background.svg);
     background-repeat: no-repeat;
     position: absolute;
     left: 50vw;
@@ -45,7 +45,7 @@ h1 {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-timing-function: steps(3);
-    background-image: url(img/hare_ani.svg);
+    background-image: url(Billeder/img/hare_ani.svg);
     background-size: 300% 100%;
     width: 15vw;
     height: 15vw;
@@ -71,7 +71,7 @@ h1 {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-timing-function: steps(4);
-    background-image: url(img/turtle_ani.svg);
+    background-image: url(Billeder/img/turtle_ani.svg);
     background-size: 400% 100%;
     width: 15vw;
     height: 15vw;
@@ -101,11 +101,11 @@ h1 {
     }
 
     50% {
-        color: blue;
+        color: #05bad1;
     }
 
     75% {
-        color: green;
+        color: #00ff00;
     }
 
     100% {
@@ -143,6 +143,7 @@ h1 {
 }
 
 #link p {
+    color: white;
     margin-top: 35vw;
     margin-left: 50vw;
 }
@@ -245,7 +246,7 @@ input {
     background-color: #ACB8E8;
     border-radius: 20px;
     margin-left: 10px;
-    top: 58vw;
+    top: 55vw;
     left: 38vw;
     width: 400px;
     height: auto;
